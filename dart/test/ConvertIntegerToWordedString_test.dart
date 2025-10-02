@@ -24,5 +24,18 @@ void main() {
       expect(words.toLowerCase(), equals('zero'));
     });
 
+    // Adding new test cases for converting nums from 0-9
+    test('returns correct words for numbers 0-9', () {
+      final expected = [
+        'Zero', 'One', 'Two', 'Three', 'Four',
+        'Five', 'Six', 'Seven', 'Eight', 'Nine'
+      ];
+
+      for (var i = 0; i < expected.length; i++) {
+        expect(integerToWordedString(i), equals(expected[i]),
+            reason: 'Failed at number $i');
+      }
+    });
+
   });
 }
