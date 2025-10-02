@@ -15,5 +15,14 @@ void main() {
       var words = integerToWordedString(number);
       expect(words.toLowerCase(), equals('one'));
     });
+
+    // Adding new test case for converting 0 -> zero 
+
+    test('0 converts to zero', (){
+      var number = 0;
+      var words = integerToWordedString(number);
+      expect(words.toLowerCase(), equals('zero'));
+    });
+
   });
 }
